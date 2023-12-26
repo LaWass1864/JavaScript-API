@@ -1,3 +1,4 @@
+/* Le code CSS que vous avez fourni stylise l'élément body et une classe appelée "app". */
 body {
   min-height: 100vh;
   margin: 0;
@@ -10,6 +11,7 @@ body {
   background: #d6e1f0;
   color: rgb(241, 241, 241);
 }
+/* Le code CSS que vous avez fourni stylise un élément avec la classe "app". */
 .app {
   width: 70%;
   min-width: 400px;
@@ -17,6 +19,7 @@ body {
   background: rgb(145, 115, 246);
   border-radius: 14px;
   padding: 20px 40px;
+  /* La propriété `box-shadow` ajoute un effet d'ombre à l'élément avec la classe "app". */
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
   cursor: pointer;
   transition: 0.2s;
