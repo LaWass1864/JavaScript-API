@@ -9,6 +9,10 @@ const content = document.getElementById("content");
 /* Le code effectue une requête GET à l'URL "https://api.blablagues.net/?rub=blagues" à l'aide de la
 fonction fetch. */
 fetch("https://api.blablagues.net/?rub=blagues")
+  /* Le code utilise la fonction « fetch » pour effectuer une requête GET à l'URL spécifiée. La partie
+  `.then((res) => res.json())` enchaîne une promesse qui convertit la réponse du serveur au format
+  JSON. La partie `.then((data) => {` est une autre promesse qui gère les données JSON renvoyées par
+  le serveur. */
   .then((res) => res.json())
   .then((data) => {
     console.log(data.data.content);
