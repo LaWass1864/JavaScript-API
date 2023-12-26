@@ -8,15 +8,15 @@ body {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.6rem;
-  background: #d6e1f0;
-  color: rgb(241, 241, 241);
+  background: #3c5981;
+  color: rgb(133, 70, 70);
 }
 /* Le code CSS que vous avez fourni stylise un élément avec la classe "app". */
 .app {
   width: 70%;
   min-width: 400px;
   max-width: 800px;
-  background: rgb(145, 115, 246);
+  background: rgb(194, 188, 213);
   border-radius: 14px;
   padding: 20px 40px;
   /* La propriété `box-shadow` ajoute un effet d'ombre à l'élément avec la classe "app". */

@@ -1,0 +1,17 @@
+{
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "git.confirmSync": false,
+    "http.proxySupport": "on",
+    "window.autoDetectColorScheme": true,
+    "settingsSync.ignoredSettings": [
+        "-files.dialog.defaultPath"
+    ],
+    "git.enableSmartCommit": true,
+    "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.settings.useSplitJSON": true,
+    "liveServer.settings.ChromeDebuggingAttachment": false
+}
