@@ -1,10 +1,9 @@
 // XMLHttpRequest ANCIENNE VERSION
-
 /**
  * La fonction enregistre le texte de réponse d'une requête HTTP.
  */
 function reqListener() {
-  // console.log(this.responseText);
+  console.log(this.responseText);
 }
 
 let req = new XMLHttpRequest();
@@ -30,7 +29,8 @@ req.send();
 // sera enregistré sur la console. */
 // .catch((err) => console.log(err));
 
-fetch("data.txt").then((res) => res.text());
+fetch("data.txt")
+  .then((res) => res.text());
 //   .then((data) => console.log(data));
 
 fetch("data.json")
@@ -50,7 +50,9 @@ const init = {
 
 // fetch("data.json", init).then((res) => console.log(res));
 
+// ---------------
 // CRUD => Create (POST), read (GET), update (PUT), delete (DELETE)
+// ---------------
 
 /* L'objet `init2` est utilisé comme argument dans la fonction `fetch` pour fournir des options pour
 une requête POST. */
@@ -84,7 +86,7 @@ document.querySelector("form").addEventListener("submit", () => {
 });
 
 // --------------------
-// Asynchronec: pouvoir dire a JS d'attendre avant de faire une logique
+// Asynchrone: pouvoir dire a JS d'attendre avant de faire une logique
 // --------------------
 setTimeout(() => {
   console.log("test");
@@ -93,9 +95,10 @@ setTimeout(() => {
 // Promise
 fetch("https://api.blablagues.net/?rub=blagues").then((res) => res);
 
-// Async await
-/**
- * La fonction fetchData récupère les données d'une URL spécifiée, puis exécute une autre fonction.
+// -----------------
+// ASYNC AWAIT
+// -----------------
+ /* La fonction fetchData récupère les données d'une URL spécifiée, puis exécute une autre fonction.
  */
 async function fetchData() {
   await fetch("https://api.blablagues.net/?rub=blagues");
@@ -103,13 +106,37 @@ async function fetchData() {
   
 }
 
-
-/**
- * La fonction fetchData2 récupère les données de l'API 'https://api.blablagues.net/?rub=blagues' puis
+/** La fonction fetchData2 récupère les données de l'API 'https://api.blablagues.net/?rub=blagues' puis
  * exécute la fonctionexecuteFonction.
  */
 const fetchData2 = async () => {
 await fetch('https://api.blablagues.net/?rub=blagues')
 
 executeFonction();
-} 
+}
+
+// -----------------
+// LE JSON : format pour faire transiter des données
+// -----------------
+
+// Méthode .json() => méthode qui s'auto-résout en renvoyant le Body de la requête.
+
+fetch('data.json')
+.then((res) => res.json())
+.then((data) => {
+  // Methode stringify
+  let settings = JSON.stringify(data);
+  // Methode Parse = transforme JSON en objet js
+  // console.log(JSON.parse(settings));
+});
+
+
+// -----------------
+// Web API : API du navigteur
+// -----------------
+
+// CLIENT STORAGE 
+// ----------------
+
+// LOCAL STORAGE (10 MO) > COOKIES (4 ko)
+
