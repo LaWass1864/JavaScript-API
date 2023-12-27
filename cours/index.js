@@ -56,7 +56,7 @@ const init = {
 une requête POST. */
 
 const init2 = {
-  method: "POST",
+  method: "DELETE",
   headers: {
     "Content-Type": "application/json"
   },
@@ -71,7 +71,9 @@ const init2 = {
 
 // Il faut envoyer le POST
 document.querySelector('form').addEventListener('submit', () => {
-  fetch('http://localhost:3000/posts', init2).then(() => 
+  fetch('http://localhost:3000/posts/2', init2).then(() => 
   console.log("data envoyée")
   );
 });
+
+
