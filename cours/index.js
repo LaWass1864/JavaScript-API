@@ -140,3 +140,15 @@ fetch('data.json')
 
 // LOCAL STORAGE (10 MO) > COOKIES (4 ko)
 
+localStorage.data = "Je stock la data";
+// Si on veut récuperer cette data
+// document.body.textContent =  localStorage.data;
+localStorage.removeItem('data');
+localStorage.user = "Denis"
+
+const obj = {
+  name: "Denis",
+  age: 22,
+}
+
+localStorage.user = obj;
