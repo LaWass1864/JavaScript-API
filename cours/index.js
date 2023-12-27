@@ -58,17 +58,17 @@ une requête POST. */
 const init2 = {
   method: "POST",
   headers: {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   },
   // L'objet js que je te passe je vais le transformer en Json
   body: JSON.stringify({
-    pseudo : "Wass",
+    pseudo: "Wass",
     message: "Hello les gens !",
     age: 26,
   }),
-  mode : "cors",
+  mode: "cors",
   credentials: "same-origin",
-}
+};
 
 // Il faut envoyer le POST
 /* Le code `document.querySelector('form').addEventListener('submit', () => {
@@ -77,12 +77,39 @@ const init2 = {
   );
 });` ajoute un écouteur d'événement à l'événement de soumission d'un élément de formulaire. Lorsque
 le formulaire est soumis, il exécutera la fonction de rappel. */
-document.querySelector('form').addEventListener('submit', () => {
-  fetch('http://localhost:3000/posts/', init2).then(() => 
-  console.log("data envoyée")
+document.querySelector("form").addEventListener("submit", () => {
+  fetch("http://localhost:3000/posts/", init2).then(() =>
+    console.log("data envoyée")
   );
 });
 
+// --------------------
+// Asynchronec: pouvoir dire a JS d'attendre avant de faire une logique
+// --------------------
+setTimeout(() => {
+  console.log("test");
+}, 2000);
+
+// Promise
+fetch("https://api.blablagues.net/?rub=blagues").then((res) => res);
+
+// Async await
+/**
+ * La fonction fetchData récupère les données d'une URL spécifiée, puis exécute une autre fonction.
+ */
+async function fetchData() {
+  await fetch("https://api.blablagues.net/?rub=blagues");
+  executeFonction();
+  
+}
 
 
+/**
+ * La fonction fetchData2 récupère les données de l'API 'https://api.blablagues.net/?rub=blagues' puis
+ * exécute la fonctionexecuteFonction.
+ */
+const fetchData2 = async () => {
+await fetch('https://api.blablagues.net/?rub=blagues')
 
+executeFonction();
+} 
