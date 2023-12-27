@@ -4,6 +4,38 @@
       "pseudo": "Wass",
       "message": "Hello les gens !",
       "id": 1
+    },
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "age": 26,
+      "id": 2
+    },
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "age": 26,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "age": 26,
+      "id": 1
+    },
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "age": 26,
+      "id": 2
+    },
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "age": 26,
+      "id": 3
     }
   ]
 }

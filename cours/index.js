@@ -56,7 +56,7 @@ const init = {
 une requête POST. */
 
 const init2 = {
-  method: "DELETE",
+  method: "POST",
   headers: {
     "Content-Type": "application/json"
   },
@@ -64,16 +64,25 @@ const init2 = {
   body: JSON.stringify({
     pseudo : "Wass",
     message: "Hello les gens !",
+    age: 26,
   }),
   mode : "cors",
   credentials: "same-origin",
 }
 
 // Il faut envoyer le POST
+/* Le code `document.querySelector('form').addEventListener('submit', () => {
+  fetch('http://localhost:3000/posts/', init2).then(() =>
+  console.log("données envoyées")
+  );
+});` ajoute un écouteur d'événement à l'événement de soumission d'un élément de formulaire. Lorsque
+le formulaire est soumis, il exécutera la fonction de rappel. */
 document.querySelector('form').addEventListener('submit', () => {
-  fetch('http://localhost:3000/posts/2', init2).then(() => 
+  fetch('http://localhost:3000/posts/', init2).then(() => 
   console.log("data envoyée")
   );
 });
+
+
 
 
