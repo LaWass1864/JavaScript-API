@@ -1,6 +1,14 @@
-// On commence par une accolade ensuite ca prends des guillemetsfzfgez
 {
-    "posts" : [
-
-    ]
+  "posts": [
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "id": 1
+    },
+    {
+      "pseudo": "Wass",
+      "message": "Hello les gens !",
+      "id": 2
+    }
+  ]
 }

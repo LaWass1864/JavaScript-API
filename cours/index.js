@@ -55,13 +55,14 @@ const init = {
 /* L'objet `init2` est utilisé comme argument dans la fonction `fetch` pour fournir des options pour
 une requête POST. */
 
-let init2 = {
+const init2 = {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
   },
+  // L'objet js que je te passe je vais le transformer en Json
   body: JSON.stringify({
-    pseudo : "From Scratch",
+    pseudo : "Wass",
     message: "Hello les gens !",
   }),
   mode : "cors",
@@ -69,8 +70,8 @@ let init2 = {
 }
 
 // Il faut envoyer le POST
-document.querySelector("form").addEventListener('submit', () => {
+document.querySelector('form').addEventListener('submit', () => {
   fetch('http://localhost:3000/posts', init2).then(() => 
-  console.log('data envoyée')
+  console.log("data envoyée")
   );
-})
+});
