@@ -34,9 +34,43 @@ fetch("data.txt").then((res) => res.text());
 //   .then((data) => console.log(data));
 
 fetch("data.json")
-// Il va falloir traiter cette DATA
+  // Il va falloir traiter cette DATA
   .then((res) => res.json())
   .then((data) => console.log(data));
 
-  
+const myHeaders = new Headers();
+/* L'objet `const init` est utilisé comme argument dans la fonction `fetch` pour fournir des options
+supplémentaires pour la requête HTTP. */
+const init = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
+// fetch("data.json", init).then((res) => console.log(res));
+
+// CRUD => Create (POST), read (GET), update (PUT), delete (DELETE)
+
+/* L'objet `init2` est utilisé comme argument dans la fonction `fetch` pour fournir des options pour
+une requête POST. */
+
+let init2 = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    pseudo : "From Scratch",
+    message: "Hello les gens !",
+  }),
+  mode : "cors",
+  credentials: "same-origin",
+}
+
+// Il faut envoyer le POST
+document.querySelector("form").addEventListener('submit', () => {
+  fetch('http://localhost:3000/posts', init2).then(() => 
+  console.log('data envoyée')
+  );
+})
