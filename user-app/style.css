@@ -3,6 +3,9 @@
 }
 
 body {
+/* Le code CSS `display:flex; flex-wrap: wrap;` est utilisé pour créer un conteneur flexible et
+spécifier que les éléments flexibles doivent être enroulés sur plusieurs lignes s'il n'y a pas
+suffisamment d'espace dans le conteneur. */
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -10,7 +13,10 @@ body {
 }
 
 .card {
-  flex: 1 0 30%;
+  /* La propriété `flex: 1 0 30%;` est une propriété abrégée permettant de définir les propriétés
+  flex-grow, flex-shrink et flex-basis d'un élément flex. */
+  flex: 1 0 25%;
+  min-width: 250px;
   margin: 10px;
   padding: 20px 20px 0;
   text-align: center;
