@@ -16,8 +16,7 @@ le serveur. */
     .then((res) => res.json())
     .then((data) => {
    
-  /* Ce code extrait l'objet `content` de l'objet `data` renvoyé par l'API. Il enregistre ensuite
-  l'objet « content » sur la console. */
+  /* Ce code extrait l'objet `content` de l'objet `data` renvoyé par l'API. Il enregistre ensuite l'objet « content » sur la console. */
       const { content } = data.data;
       console.log(content);
 
