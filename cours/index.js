@@ -29,8 +29,7 @@ req.send();
 // sera enregistré sur la console. */
 // .catch((err) => console.log(err));
 
-fetch("data.txt")
-  .then((res) => res.text());
+fetch("data.txt").then((res) => res.text());
 //   .then((data) => console.log(data));
 
 fetch("data.json")
@@ -98,22 +97,21 @@ fetch("https://api.blablagues.net/?rub=blagues").then((res) => res);
 // -----------------
 // ASYNC AWAIT
 // -----------------
- /* La fonction fetchData récupère les données d'une URL spécifiée, puis exécute une autre fonction.
+/* La fonction fetchData récupère les données d'une URL spécifiée, puis exécute une autre fonction.
  */
 async function fetchData() {
   await fetch("https://api.blablagues.net/?rub=blagues");
   executeFonction();
-  
 }
 
 /** La fonction fetchData2 récupère les données de l'API 'https://api.blablagues.net/?rub=blagues' puis
  * exécute la fonctionexecuteFonction.
  */
 const fetchData2 = async () => {
-await fetch('https://api.blablagues.net/?rub=blagues')
+  await fetch("https://api.blablagues.net/?rub=blagues");
 
-executeFonction();
-}
+  executeFonction();
+};
 
 // -----------------
 // LE JSON : format pour faire transiter des données
@@ -121,21 +119,20 @@ executeFonction();
 
 // Méthode .json() => méthode qui s'auto-résout en renvoyant le Body de la requête.
 
-fetch('data.json')
-.then((res) => res.json())
-.then((data) => {
-  // Methode stringify
-  let settings = JSON.stringify(data);
-  // Methode Parse = transforme JSON en objet js
-  // console.log(JSON.parse(settings));
-});
-
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    // Methode stringify
+    let settings = JSON.stringify(data);
+    // Methode Parse = transforme JSON en objet js
+    // console.log(JSON.parse(settings));
+  });
 
 // -----------------
 // Web API : API du navigteur
 // -----------------
 
-// CLIENT STORAGE 
+// CLIENT STORAGE
 // ----------------
 
 // LOCAL STORAGE (10 MO) > COOKIES (4 ko)
@@ -143,12 +140,12 @@ fetch('data.json')
 localStorage.data = "Je stock la data";
 // Si on veut récuperer cette data
 // document.body.textContent =  localStorage.data;
-localStorage.removeItem('data');
-localStorage.user = "Denis"
+localStorage.removeItem("data");
+localStorage.user = "Denis";
 
 const obj = {
   name: "Denis",
   age: 22,
-}
-
+};
+//  Il faut passer des chaines de caractères
 localStorage.user = obj;
