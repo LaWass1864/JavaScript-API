@@ -171,4 +171,8 @@ document.cookie = "username = Wass";
 
 // Bonne pratique
 
-document.cookie = "pseudo=Wass;path=/;expire=Thu, 31 dec 2023;secure;samesite"
+/* Le code `document.cookie = "pseudo=Wass; path=/; expires=Thu, 31 Dec 2023 23:59:59 GMT; secure;
+samesite";` définit un cookie nommé "pseudo" avec la valeur "Wass" . */
+document.cookie = "pseudo=Wass; path=/; expires=Thu, 30 Dec 2023 23:59:59 GMT; secure; samesite";
+
+
