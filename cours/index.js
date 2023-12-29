@@ -132,14 +132,15 @@ fetch("data.json")
 // Web API : API du navigteur
 // -----------------
 
+// ----------------
 // CLIENT STORAGE
 // ----------------
 
 // LOCAL STORAGE (10 MO) > COOKIES (4 ko)
 
 localStorage.data = "Je stock la data";
-// Si on veut récuperer cette data
-// document.body.textContent =  localStorage.data;
+// Si on veut récuperer cette data pour l'afficher dans le Body
+document.body.innerHTML +=  `<h1>${localStorage.data}</h1>`;
 localStorage.removeItem("data");
 localStorage.user = "Denis";
 
@@ -147,5 +148,27 @@ const obj = {
   name: "Denis",
   age: 22,
 };
-//  Il faut passer des chaines de caractères
-localStorage.user = obj;
+//  Il faut passer des chaines de caractères pour l'interprester en JSON
+localStorage = JSON.stringify(obj);
+document.body.innerHTML +=  `<h1>${localStorage.user}</h1>`;
+// console.log(JSON.parse(localStorage.user))
+
+// SESSION STORAGE (stocker des choses provisoires)
+
+/* Le code `sessionStorage.dataSettings = "55px";` définit une valeur de "55px" pour la clé `dataSettings` dans l'objet sessionStorage. */
+sessionStorage.dataSettings = "55px";
+console.log(sessionStorage.dataSettings);
+// pour supprimer
+// sessionStorage.clear()
+
+// ----------------
+// COOKIES : verification de bcp de chose comme login d'un utilisateur
+// ----------------
+
+// Ajouter un cookie qui reste le temps d'une session
+
+document.cookie = "username = Wass";
+
+// Bonne pratique
+
+document.cookie = "pseudo=Wass;path=/;expire=Thu, 31 dec 2023;secure;samesite"
