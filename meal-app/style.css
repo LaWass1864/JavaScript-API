@@ -9,13 +9,13 @@
 
 body {
   min-height: 100vh;
-  background: rgb(54, 156, 134);
+  background: #232946;
 }
 form {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
+  background: #b8c1ec;
   padding: 6px 20px;
   border-radius: 0 0 6px 6px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.054);
@@ -23,7 +23,7 @@ form {
 input {
   border: 1px solid rgb(235, 244, 242);
   background: rgb(235, 244, 242);
-  color: #16d9e7;
+  color: #121629;
   outline: none;
   border-radius: 5px;
   height: 30px;
@@ -52,10 +52,10 @@ input:focus {
 }
 h2 {
   margin: 6px 0;
-  color: #16d9e7;
+  color: #121629;
 }
 p {
-  color: #36ca79;
+  color: #eebbc3;
 }
 img {
   width: 100%;
@@ -66,4 +66,5 @@ img {
 }
 li > ul > li {
   text-align: left;
+  color:#232946;
 }
